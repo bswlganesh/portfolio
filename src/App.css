@@ -1,0 +1,23 @@
+
+/* .mulish-<uniquifier> {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+.pixel{
+display: flex;
+font-family: "Mulish", sans-serif;
+justify-content: center;
+align-items: center;
+height: 100vh ;
+flex-direction: column;
+}
+.links{
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
