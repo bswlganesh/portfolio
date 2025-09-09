@@ -7,9 +7,10 @@ import React from 'react'
 export default function App() {
   return (
     <div className='pixel'>
-      <p>THIS WEBSITE IS UNDER CONSTRUCTION</p>
+      <p>bswlganesh</p>
+      <p>This Website is under Construction</p>
       <Slab color="#2c94e5" size="medium" text="" textColor="" />
-      <br/>
+      
       <p>Check out my work  :</p>
       
       
