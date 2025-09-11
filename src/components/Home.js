@@ -26,9 +26,11 @@ export const Home = () => {
             </p>
             <div className="social-icons">
               <a href="https://github.com/bswlganesh" target="_blank" rel="noopener noreferrer">
+                <span className="visually-hidden">View my GitHub profile</span>
                 <img src={githubIcon} alt="GitHub" />
               </a>
               <a href="https://instagram.com/bswlganesh" target="_blank" rel="noopener noreferrer">
+                <span className="visually-hidden">Follow me on Instagram</span>
                 <img src={instagramIcon} alt="Instagram" />
               </a>
               <a
@@ -36,12 +38,15 @@ export const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <span className="visually-hidden">Connect with me on LinkedIn</span>
                 <img src={linkedinIcon} alt="LinkedIn" />
               </a>
               <a href="https://wa.me/qr/7WEJGQ7SJXSBK1" target="_blank" rel="noopener noreferrer">
+                <span className="visually-hidden">Contact me on WhatsApp</span>
                 <img src={whatsappIcon} alt="WhatsApp" />
               </a>
               <a href="https://t.me/bswlganesh" target="_blank" rel="noopener noreferrer">
+                <span className="visually-hidden">Contact me on Telegram</span>
                 <img src={telegramIcon} alt="Telegram" />
               </a>
               

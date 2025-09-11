@@ -28,81 +28,39 @@
 }
 
 .text-content-inner {
- padding-right: 5rem; /* Add padding on left and right */
+ /* padding-right: 4rem; Add padding on left and right */
   max-width: 60%; /* Control the width of the text block */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Center vertically if there's extra space */
-}
-
-.text-content h2 {
-  font-size: 4rem;
-max-width: 100%;
-  font-weight: 700;
-  color: #1a202c;
-  margin-bottom: 0rem; /* Reduced margin to bring paragraph closer */
-  text-align: center;
-  white-space: nowrap; /* Prevent the text from wrapping to a new line */
-}
-
-.text-content p {
-  font-size: 1.0rem;
-  line-height: 1.6;
-  width: 100%;
-text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  color: #4a5568;
-  margin-bottom: 2rem;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .social-icons a img {
-  width: 32px; /* Or your desired size */
-  height: 32px;
+  width: 40px; /* Or your desired size */
+  height: 40px;
   transition: transform 0.2s ease-in-out;
 }
 
 .social-icons a:hover img {
   transform: scale(1.1);
 }
-.work-with-me-btn {
-  display: inline-block;
-  background-color: #000000;
-  color: rgb(0, 0, 0);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.text-content-inner {
-  padding-right: 5rem; /* Add padding on left and right */
-  max-width: 60%; /* Control the width of the text block */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center vertically if there's extra space */
-}
 
 .text-content-inner h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   max-width: 100%;
   font-weight: 700;
   color: #1a202c;
   margin-bottom: 0rem; /* Reduced margin to bring paragraph closer */
   text-align: center;
-  white-space: nowrap; /* Prevent the text from wrapping to a new line */
 }
 
 .text-content-inner p {
@@ -129,10 +87,6 @@ text-align: center;
 
 .work-with-me-btn:hover {
     color: #ffffff;
-  background-color: #154d71;
-}
-
-.work-with-me-btn:hover {
   background-color: #154d71;
 }
 
@@ -168,7 +122,29 @@ text-align: center;
     gap: 20px;
   }
 
+  .image-content {
+    order: 1; /* Make image appear first */
+  }
+
   .text-content {
+    order: 2; /* Make text content appear second */
     max-width: 100%;
+    justify-content: center; /* Center the text content block */
+  }
+
+  .text-content-inner {
+    padding-right: 0; /* Remove right padding on mobile */
+    max-width: 100%; /* Allow it to take full width */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .text-content-inner h2 {
+    font-size: 2.5rem; /* Reduce heading size for mobile */
+    white-space: normal; /* Allow heading to wrap */
+  }
+
+  .text-content-inner p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+    max-width: 90%; /* Constrain line length for readability */
   }
 }
