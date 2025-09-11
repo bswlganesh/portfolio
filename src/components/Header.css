@@ -1,0 +1,81 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  font-family: "Merriweather Sans", sans-serif;
+    color: black;
+ 
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000000;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;  position: relative; /* For the underline effect */
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px; /* Adjust as needed */
+  left: 0;
+  background-color: #154D71; /* Color of the underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+  width: 100%;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #154D71;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Adjust padding for smaller screens */
+    gap: 15px; /* Add some space between the logo section and nav */
+  }
+
+  .nav ul {
+    flex-wrap: nowrap; /* Prevent nav items from wrapping */
+    justify-content: center; /* Center nav items when they wrap */
+    gap: 15px; /* Adjust gap for wrapped items */
+  }
+
+  .nav a {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+}
