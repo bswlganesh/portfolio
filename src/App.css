@@ -1,29 +1,77 @@
-
-/* .mulish-<uniquifier> {
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
-body{
-  margin: 0px;
-  padding: 0px;
+body {
+  margin: 0;
+  padding: 0;
   display: flex;
-font-family: "Mulish", sans-serif;
-justify-content: center;
-align-items: center;
-height: 100vh ;
-font-size: 1.2rem;
-flex-direction: column;
-
+  font-family: "Mulish", sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
 }
 
-.pixel{
- 
-display: flex;
-justify-content: center;
-align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  background: #ffffffee;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
 
-flex-direction: column;
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2c94e5;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.work-text {
+  margin: 1.5rem 0 0.8rem;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  background: #2c94e5;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(44, 148, 229, 0.25);
+}
+
+.links a:hover {
+  background: #1b6eb8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(44, 148, 229, 0.35);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
