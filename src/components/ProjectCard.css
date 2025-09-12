@@ -8,7 +8,15 @@
   display: flex;
   flex-direction: column;
   max-width: 500px; /* An example max-width for better layout */
+  height: 100%; /* Make card fill the grid cell height */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+/* ---- Hover Effect for the Card ---- */
+.project-card:hover {
+  transform: translateY(-8px); /* Lift the card up slightly */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Increase shadow for more depth */
 }
 
 /* ---- Card Header (Yellow Bar) ---- */
@@ -30,7 +38,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between description and tags */
+  flex-grow: 1; /* Make the body take up available space */
 }
 
 .project-description {
@@ -38,6 +46,7 @@
   font-size: 1rem; /* 16px */
   line-height: 1.6; /* Improve readability */
   margin: 0;
+  flex-grow: 1; /* Push tags and footer to the bottom */
 }
 
 /* ---- Technology Tags ---- */
@@ -45,6 +54,7 @@
   display: flex;
   flex-wrap: wrap; /* Allow tags to wrap to the next line */
   gap: 8px; /* Space between each tag */
+  margin-top: 20px; /* Space between description and tags */
 }
 
 .tech-tag {

@@ -4,20 +4,20 @@ import { ProjectCard } from "./ProjectCard";
 
 const projectData = [
   {
-    title: "Project One",
+    title: "Filminfosis",
     description:
-      "This is a sample description for the first project. It highlights the key features and the problem it solves.",
-    technologies: ["React", "Node.js", "CSS Grid"],
-    websiteUrl: "#",
-    sourceCodeUrl: "#",
+      "A sleek app to explore detailed movie info at a glance",
+    technologies: ["React.js", "JavaScript", "HTML5", "Sass", "CSS","API"],
+    websiteUrl: "https://filminfosis.netlify.app/",
+    sourceCodeUrl: "https://github.com/bswlganesh/filminfosis",
   },
   {
-    title: "Project Two",
+    title: "Todolist",
     description:
-      "A brief overview of the second project, explaining its purpose and the technologies used to build it.",
-    technologies: ["JavaScript", "HTML5", "Sass", "API"],
-    websiteUrl: "#",
-    sourceCodeUrl: "#",
+      "A clean, intuitive task manager to track your things-to-do effortlessly.",
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS","Storage"],
+    websiteUrl: "https://bswl-todolist.netlify.app/",
+    sourceCodeUrl: "https://github.com/bswlganesh/todolist",
   },
   // Add more project objects here
 ];
