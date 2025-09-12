@@ -1,150 +1,93 @@
 .home-section {
   padding: 60px 20px;
-  min-height: calc(100vh - 150px); /* Adjust based on header/footer height */
+  min-height: calc(
+    100vh - 150px
+  ); /* Adjust based on header/footer height */
   display: flex;
   align-items: center;
   justify-content: center;
-   font-family: "Merriweather Sans", sans-serif;
+  font-family: sans-serif;
 }
 
 .home-content {
-  display: grid; /* Use grid for easy overlapping */
-  grid-template-columns: repeat(2, 1fr); /* Define two equal columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
   width: 100%;
-}
-
-.image-content,
-.text-content {
-  grid-row: 1; /* Place both items in the same row */
-
+  max-width: 1200px;
 }
 
 .text-content {
-  grid-column: 1 / -1; /* Span text across both columns */
-  display: flex; /* Use flexbox to help position the inner wrapper */
-  justify-content: flex-end; /* Push inner wrapper to the right */
-  
-}
-
-.text-content-inner {
- /* padding-right: 4rem; Add padding on left and right */
-  max-width: 60%; /* Control the width of the text block */
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center vertically if there's extra space */
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 0.5rem;
+.pre-heading {
+  font-size: 1rem;
+  font-weight: 300; /* thin */
+  color: #6b46c1; /* purple */
+  margin: 0 0 0.5rem 0;
 }
 
-.social-icons a img {
-  width: 40px; /* Or your desired size */
-  height: 40px;
-  transition: transform 0.2s ease-in-out;
+.main-heading {
+  font-size: 4.5rem;
+  font-weight: 700; /* bold */
+  color: #1a202c; /* black */
+  margin: 0;
+  line-height: 1.1;
 }
 
-.social-icons a:hover img {
-  transform: scale(1.1);
+.sub-heading {
+  font-size: 1.5rem;
+  color: #2d3748; /* dark gray */
+  margin: 0.25rem 0 1.5rem 0;
+  font-weight: 400;
 }
 
-.text-content-inner h2 {
-  font-size: 4rem;
-  max-width: 100%;
-  font-weight: 700;
-  color: #1a202c;
-  margin-bottom: 0rem; /* Reduced margin to bring paragraph closer */
-  text-align: center;
-}
-
-.text-content-inner p {
+.text-content p {
   font-size: 1rem;
   line-height: 1.6;
-  width: 100%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  color: #4a5568;
-  margin-bottom: 2rem;
-}
-
-.work-with-me-btn {
-  display: inline-block;
-  background-color: #fff9af;
-  color: rgb(0, 0, 0);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.work-with-me-btn:hover {
-    color: #ffffff;
-  background-color: #154d71;
+  color: #4a5568; /* dark gray */
 }
 
 .image-content {
-  grid-column: 1; /* Place image in the first column */
-  z-index: 1; /* Ensure image is on top of the text */
   display: flex;
+  
   justify-content: center;
   align-items: center;
 }
 
-.profile-image {
-  max-width:550px;
-  width: 100%;
+.illustration-image {
+
+  max-width: 200%;
+  width:2000%;
   object-fit: cover;
-  /* Apply a multi-directional fade effect to the bottom, left, and right edges */
-  mask-image: 
-    linear-gradient(to right, transparent, black 25%, black 75%, transparent),
-    linear-gradient(to bottom, black 60%, transparent);
-  -webkit-mask-image: 
-    linear-gradient(to right, transparent, black 25%, black 75%, transparent),
-    linear-gradient(to bottom, black 60%, transparent);
-  mask-composite: intersect; /* Use 'intersect' to combine the masks */
-  -webkit-mask-composite: source-in; /* Safari uses 'source-in' for the same effect */
 }
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .home-content {
-    display: flex; /* Revert to flex for simpler stacking on mobile */
+    grid-template-columns: 1fr;
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 40px;
   }
 
   .image-content {
-    order: 1; /* Make image appear first */
+    order: -1; /* Make image appear first on mobile */
   }
 
   .text-content {
-    order: 2; /* Make text content appear second */
-    max-width: 100%;
-    justify-content: center; /* Center the text content block */
+    align-items: center;
   }
 
-  .text-content-inner {
-    padding-right: 0; /* Remove right padding on mobile */
-    max-width: 100%; /* Allow it to take full width */
-    align-items: center; /* Center items horizontally */
+  .main-heading {
+    font-size: 3rem;
   }
 
-  .text-content-inner h2 {
-    font-size: 2.5rem; /* Reduce heading size for mobile */
-    white-space: normal; /* Allow heading to wrap */
-  }
-
-  .text-content-inner p {
-    font-size: 0.9rem; /* Adjust paragraph font size */
-    max-width: 90%; /* Constrain line length for readability */
+  .sub-heading {
+    font-size: 1.25rem;
   }
 }

@@ -8,11 +8,7 @@ body {
 }
 
 main {
-  max-width: 1280px; /* Sets the maximum width of the content */
-  margin-left: auto; /* In combination with margin-right, centers the element */
-  margin-right: auto;
-  padding: 0 1rem; /* Adds some padding on the sides for smaller screens */
-  
+  width: 100%;
 }
 
 /* A utility class to visually hide elements while keeping them accessible to screen readers */
