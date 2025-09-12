@@ -73,8 +73,13 @@
   .about-heading {
     font-size: 2.5rem;
   }
+  .about-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
   .about-text-content p {
     font-size: 0.95rem;
   }
 }
+

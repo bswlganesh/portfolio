@@ -91,3 +91,11 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 768px) {
+  .home-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+

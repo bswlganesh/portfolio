@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import illustration from "../Assets/casset.png";
 
-export const Home = () => {
+const Home = () => {
   return (
     <section id="home" className="home-section">
       <div className="home-content">
@@ -29,3 +29,5 @@ export const Home = () => {
     </section>
   );
 };
+
+export default Home;

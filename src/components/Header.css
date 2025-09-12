@@ -1,16 +1,23 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 20px;
   font-family: sans-serif;
-  background-color: #111827; /* Very dark navy blue/near-black */
+  background-color: #1a202c; /* Dark navy-blue */
   color: white;
-  /* To make it full width but content centered */
   width: 100%;
   box-sizing: border-box;
   position: sticky;
   top: 0;
+  z-index: 1000; /* Ensure header stays on top */
+  border-bottom: 2px solid #facc15; /* bright yellow */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+  width: 100%;
 }
 
 .logo-section {
@@ -41,8 +48,9 @@
 
 .nav a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;  position: relative; /* For the underline effect */
+  color: #e5e7eb; /* Lighter gray for nav links */
+  font-size: 1rem;
+  position: relative; /* For the underline effect */
 }
 
 .nav a::after {
@@ -51,8 +59,9 @@
   width: 0;
   height: 2px;
   bottom: -5px; /* Adjust as needed */
-  left: 0;
-  background-color: #ffd700; /* Yellow to match resume button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #facc15; /* Yellow to match border */
   transition: width 0.3s ease-in-out;
 }
 
@@ -61,22 +70,45 @@
 }
 
 .nav a:hover {
-  color: #154D71;
+  color: #ffffff; /* Brighter on hover */
+}
+
+.cta-section {
+  display: flex;
+  align-items: center;
+}
+
+.resume-button {
+  background-color: #ffffff;
+  color: #1a202c;
+  border: none;
+  border-radius: 0.375rem; /* rounded-md */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  font-weight: 700; /* bold */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-button:hover {
+  background-color: #f3f4f6; /* Slightly off-white */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 20px; /* Adjust padding for smaller screens */
-    gap: 15px; /* Add some space between the logo section and nav */
+  .header-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .nav ul {
-    flex-wrap: nowrap; /* Prevent nav items from wrapping */
-    justify-content: center; /* Center nav items when they wrap */
-    gap: 15px; /* Adjust gap for wrapped items */
+  .nav {
+    order: 1; /* Move nav below logo and button */
+    width: 100%;
+    justify-content: center;
+    display: flex;
   }
 
   .nav a {

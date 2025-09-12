@@ -1,6 +1,6 @@
 import React from "react";
 import "./Projects.css";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "../components/ProjectCard";
 
 const projectData = [
   {
@@ -34,3 +34,4 @@ export const Projects = () => {
     </section>
   );
 };
+
