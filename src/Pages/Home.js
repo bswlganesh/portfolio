@@ -10,7 +10,7 @@ const Home = () => {
           <div className="text-content-inner">
             <p className="pre-heading">Hey there, my name is</p>
             <h1 className="main-heading">Baswal Ganesh</h1>
-            <h2 className="sub-heading">a Front-end Engineer</h2>
+            <h2 className="sub-heading">A Front-end Engineer</h2>
             <p>
               Baswal Ganesh is a freelance front-end engineer based in
               Delhi-Ind. <br />

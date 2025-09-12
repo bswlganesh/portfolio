@@ -7,6 +7,17 @@ body {
   margin: 0; /* It's a good practice to remove default body margin */
 }
 
+@media (max-width: 768px) {
+  .app-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  .app-wrapper > main > section, .app-wrapper > footer {
+    scroll-snap-align: start;
+  }
+}
+
 main {
   width: 100%;
 }
