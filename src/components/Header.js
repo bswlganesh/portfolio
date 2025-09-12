@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-
+import resumeFile from "../Assets/resume.pdf";
 export const Header = () => {
   return (
     <header className="header">
@@ -25,9 +25,14 @@ export const Header = () => {
           </ul>
         </nav>
         <div className="cta-section">
-          <a href="/resume.pdf" download className="resume-button">
-            Resume
-          </a>
+          <a
+                      href={resumeFile}
+                      download="BaswalGanesh_Resume.pdf"
+                      className="resume-button"
+                    >
+                      Resume
+                    </a>
+          
         </div>
       </div>
     </header>
