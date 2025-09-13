@@ -1,3 +1,27 @@
+I'm excited to share my newly-developed personal portfolio, built from the ground up with React. This project was a fantastic opportunity to combine modern front-end technologies to create a dynamic and engaging user experience.
+
+Technical Stack & Key Features:
+
+Framework: Built on React for a component-based, declarative UI.
+Interactive Backgrounds: Implemented tsparticles and react-tsparticles to create a living, animated particle background that responds to user interaction, adding a layer of depth to the design.
+3D Parallax Effects: Used react-parallax-tilt on project cards and other elements to create a subtle 3D tilt effect on hover, making the UI feel more tangible and responsive.
+Iconography: Integrated Font Awesome icons via @fortawesome/react-fontawesome for clean, scalable vector icons across the site.
+Styling: Crafted a modern, responsive design using pure CSS, ensuring a seamless experience across all devices, from mobile phones to desktops.
+I'm proud of how this turned out and would appreciate you taking a look!
+
+Live Site:
+GitHub Repo: 
+
+#ReactJS #FrontEnd #WebDevelopment #JavaScript #CSS #Portfolio #UI #UX #tsparticles
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
