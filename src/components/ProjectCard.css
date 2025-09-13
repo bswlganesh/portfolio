@@ -10,13 +10,13 @@
   max-width: 500px; /* An example max-width for better layout */
   height: 100%; /* Make card fill the grid cell height */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition for hover */
 }
 
 /* ---- Hover Effect for the Card ---- */
 .project-card:hover {
   transform: translateY(-8px); /* Lift the card up slightly */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Increase shadow for more depth */
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1); /* Increase shadow for more depth */
 }
 
 /* ---- Card Header (Yellow Bar) ---- */

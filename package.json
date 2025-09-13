@@ -12,6 +12,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-loading-indicators": "^1.0.1",
+    "react-parallax-tilt": "^1.7.308",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.9.1"
