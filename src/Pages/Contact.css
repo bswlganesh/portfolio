@@ -1,0 +1,203 @@
+/* ============================
+   Contact Section Styles
+============================ */
+.contact-section {
+  background-color: #fff5ef; /* Light beige/cream */
+  font-family: 'Poppins', sans-serif;
+  color: #111827; /* Dark navy/charcoal */
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden; /* Prevent scrollbars during animation */
+}
+
+/* ============================
+   Layout
+============================ */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+
+  /* Fade in on load */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contact-text-content {
+  padding: 20px;
+  animation: slideInLeft 1.2s ease forwards;
+}
+
+.contact-illustration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 1.2s ease forwards;
+}
+
+.contact-illustration {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ============================
+   Typography
+============================ */
+.contact-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.contact-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.contact-paragraph:nth-of-type(1) {
+  animation-delay: 0.3s;
+}
+
+.contact-paragraph:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+/* ============================
+   Buttons
+============================ */
+.contact-buttons {
+  margin-top: 40px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* Subtle border */
+  border-radius: 8px;
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #eef2ff; /* Light blue/purple on hover */
+  border-color: #c7d2fe;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================
+   Animations
+============================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-text-content {
+    text-align: center;
+  }
+
+  .contact-buttons {
+    justify-content: center;
+  }
+  
+  .contact-buttons {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .contact-illustration-container {
+    order: -1; /* Move illustration to top on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 2.2rem;
+  }
+}

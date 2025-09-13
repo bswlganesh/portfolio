@@ -1,11 +1,13 @@
 .about-section {
-  background-color: #3b3eff;
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #0e12f8, #6c63ff);
+  padding: 100px 20px;
   min-height: 80vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 .about-content {
@@ -21,31 +23,74 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: float 4s ease-in-out infinite;
 }
 
 .about-illustration {
   max-width: 100%;
-  width: 100%;
+  width: 90%;
   object-fit: contain;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  transition: transform 0.4s ease;
+}
+
+.about-illustration:hover {
+  transform: scale(1.05);
 }
 
 .about-text-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .about-heading {
   font-size: 3.5rem;
   font-weight: 700;
   color: #ffd700;
-  margin: 0 0 1.5rem 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 2px;
 }
 
 .about-text-content p {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #f1f1f1;
+}
+
+/* Floating image effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Fade-in text */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive adjustments */
@@ -53,11 +98,11 @@
   .about-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
   }
 
   .about-image-content {
-    order: -1; /* Image on top on mobile */
-    margin-bottom: 40px;
+    order: -1; /* Image on top */
   }
 
   .about-text-content {
@@ -67,19 +112,23 @@
   .about-heading {
     font-size: 3rem;
   }
+
+  .about-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
   .about-heading {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
+
   .about-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 70px 15px;
   }
 
   .about-text-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
-

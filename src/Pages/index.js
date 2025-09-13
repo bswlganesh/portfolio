@@ -1,4 +1,5 @@
-export {Projects} from "./Projects";
-export {default as Home} from "./Home";
-export {About} from "./About";
- 
+export * from "./Projects";
+export { default as Home } from "./Home";
+export * from "./About";
+export * from "./Contact";
+export * from "./Skills";

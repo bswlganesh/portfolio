@@ -1,6 +1,8 @@
 import React from "react";
 import "./Projects.css";
 import { ProjectCard } from "../components/ProjectCard";
+import filminfosisImage from '../Assets/filminfosis.png';
+import todolistImage from '../Assets/todo.png';
 
 const projectData = [
   {
@@ -8,6 +10,7 @@ const projectData = [
     description:
       "A sleek app to explore detailed movie info at a glance",
     technologies: ["React.js", "JavaScript", "HTML5", "Sass", "CSS","API"],
+    imageUrl: filminfosisImage,
     websiteUrl: "https://filminfosis.netlify.app/",
     sourceCodeUrl: "https://github.com/bswlganesh/filminfosis",
   },
@@ -16,6 +19,7 @@ const projectData = [
     description:
       "A clean, intuitive task manager to track your things-to-do effortlessly.",
     technologies: ["React.js", "JavaScript", "HTML5", "CSS","Storage"],
+    imageUrl: todolistImage,
     websiteUrl: "https://bswl-todolist.netlify.app/",
     sourceCodeUrl: "https://github.com/bswlganesh/todolist",
   },
@@ -34,4 +38,3 @@ export const Projects = () => {
     </section>
   );
 };
-

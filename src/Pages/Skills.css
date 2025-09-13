@@ -1,0 +1,179 @@
+.skills-section {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skills-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.skills-subheading {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* honeycomb row */
+.skill-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+
+/* items */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* fade stagger effect */
+.skill-item:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.skill-item:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+/* icon wrapper */
+.skill-icon-wrapper {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(229, 231, 235, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  cursor: pointer;
+}
+
+/* .skill-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(#60a5fa, #34d399, #fbbf24, #60a5fa);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+} */
+
+/* .skill-item:hover .skill-icon-wrapper {
+  transform: translateY(-12px) scale(1.07);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+} */
+
+/* .skill-item:hover .skill-icon-wrapper::before {
+  opacity: 1;
+} */
+
+.skill-icon {
+  width:80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.15) rotate(3deg);
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  letter-spacing: 0.3px;
+}
+
+/* Specific animation for React icon */
+.react-icon-spin {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Specific animation for Python icon */
+.python-icon-choppy-rotate {
+  animation: choppy-rotate 5s steps(4, end) infinite;
+}
+
+@keyframes choppy-rotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+/* animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .skill-row {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .skill-row.offset {
+    transform: none;
+  }
+  .skill-icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .skill-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
