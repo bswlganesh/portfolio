@@ -44,7 +44,7 @@ export const Footer = () => {
           </a>
         </div>
         <div className="footer-center">
-          <p>bswlganesh copyright 2247</p>
+          <p>Copyright © bswlganesh 2025 All rights Reserved</p>
         </div>
         <div className="footer-right">
           <a

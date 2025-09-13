@@ -14,7 +14,7 @@ import cssIcon from "../Assets/Skills/css.svg";
 const skills = [
   { name: "JavaScript", icon: javascriptIcon },
   { name: "React", icon: reactIcon, specialClass: "react-icon-spin" },
-  { name: "Python", icon: pythonIcon, specialClass: "python-icon-choppy-rotate" },
+  { name: "Python", icon: pythonIcon },
   { name: "C++", icon: cppIcon },
   { name: "CSS", icon: cssIcon },
   { name: "GitHub", icon: githubIcon },
@@ -41,7 +41,10 @@ export const Skills = () => {
               className={`skill-row ${rowIndex % 2 === 1 ? "offset" : ""}`}
             >
               {row.map((skill, index) => (
-                <div className="skill-item" key={index}>
+                <div
+                  className="skill-item"
+                  key={index}
+                >
                   <div className="skill-icon-wrapper">
                     <img
                       src={skill.icon}
