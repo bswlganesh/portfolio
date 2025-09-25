@@ -3,9 +3,28 @@ import "./Projects.css";
 import { ProjectCard } from "../components/ProjectCard";
 import filminfosisImage from '../Assets/filminfosis.png';
 import todolistImage from '../Assets/todo.png';
+import laundryImage from '../Assets/laundry.png';
 
+import verveImage from '../Assets/verve.png';
 const projectData = [
+ 
   {
+  title: "Laundry Factory",
+  description: "A clean, intuitive task manager to track your things-to-do effortlessly.",
+  technologies: ["React.js", "JavaScript", "HTML5", "CSS", "Storage"],
+  imageUrl: laundryImage,
+  websiteUrl: "https://laundryinit.netlify.app/",
+  sourceCodeUrl: "https://github.com/bswlganesh/laundryService",
+},
+{
+  title: "Verve",
+  description: "An official website for Verve, the dramatics society of SSCBS, showcasing events and team members.",
+  technologies: ["React.js", "JavaScript", "HTML5", "Sass", "CSS"],
+  imageUrl: verveImage,
+  websiteUrl: "https://vervecbs.netlify.app/",
+  sourceCodeUrl: "https://github.com/bswlganesh/verve",
+},
+{
     title: "Filminfosis",
     description:
       "A sleek app to explore detailed movie info at a glance",
@@ -14,7 +33,7 @@ const projectData = [
     websiteUrl: "https://filminfosis.netlify.app/",
     sourceCodeUrl: "https://github.com/bswlganesh/filminfosis",
   },
-  {
+   {
     title: "Todolist",
     description:
       "A clean, intuitive task manager to track your things-to-do effortlessly.",
@@ -23,6 +42,7 @@ const projectData = [
     websiteUrl: "https://bswl-todolist.netlify.app/",
     sourceCodeUrl: "https://github.com/bswlganesh/todolist",
   },
+   
   // Add more project objects here
 ];
 
